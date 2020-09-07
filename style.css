@@ -1,13 +1,20 @@
 @font-face {
     font-family: Inter;
     font-weight: 400;
-    src: url(assets/inter-regular.woff2), url(assets/inter-regular.woff);
+    src: url(assets/inter-var.woff2);
 }
 
-@font-face {
-    font-family: Inter;
-    font-weight: 700;
-    src: url(assets/inter-bold.woff2), url(assets/inter-bold.woff)
+@keyframes animate-type {
+    0% {
+        transform-origin: 0 0;
+        font-variation-settings: "wght" 400, "slnt" 0;
+        letter-spacing: 0;
+    }
+
+    100% {
+        font-variation-settings: "wght" 900, "slnt" -8;
+        letter-spacing: 5px;
+    }
 }
 
 body {
@@ -33,6 +40,8 @@ header {
     font-size: 48px;
     font-weight: 700;
     line-height: 1;
+    
+    animation: animate-type 3s infinite alternate;
 }
 
 footer {
